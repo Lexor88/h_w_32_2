@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import create_course_payment
+from .views import CreatePaymentView  # Импортируем классовое представление
 
 urlpatterns = [
-    path("create-payment/", create_course_payment, name="create-payment"),
+    path("create-payment/", CreatePaymentView.as_view(), name="create-payment"),  # Используем .as_view()
 ]
